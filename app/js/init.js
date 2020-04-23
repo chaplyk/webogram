@@ -1,11 +1,7 @@
 ;(function initApplication () {
   // Prevent click-jacking
   try {
-    if (window == window.top || window.chrome && chrome.app && chrome.app.window) {
       document.documentElement.style.display = 'block'
-    } else {
-      top.location = self.location
-    }
   } catch (e) {console.error('CJ protection', e) }
 
   var classes = [
@@ -47,19 +43,12 @@
       layout = 'mobile'
     }
     else if (Config.Modes.force_desktop) {
-      layout = 'desktop'
+      layout = 'mobile'
     }
 
     switch (layout) {
-      case 'mobile':
-        Config.Mobile = true
-        break
-      case 'desktop':
-        Config.Mobile = false
-        break
       default:
-        var width = $(window).width()
-        Config.Mobile = Config.Navigator.mobile || width > 10 && width < 480
+        Config.Mobile = true
         break
     }
     $('head').append(

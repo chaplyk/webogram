@@ -124,7 +124,7 @@ html {
 }
 .navbar-toggle-wrap {
   float: right;
-  display: block;
+  display: none;
   margin: 0;
 
   .navbar-toggle {
@@ -202,10 +202,9 @@ html {
 
 .navbar-search-wrap {
   display: none;
-  float: right;
-  margin: 0;
+  margin-left: 47%;
+  margin-top: 3px;
   line-height: 0;
-  padding: 12px 14px 11px;
   border: 1px solid transparent;
   border-radius: 4px;
 
@@ -238,10 +237,6 @@ html {
     float: none;
     margin: 0;
 
-    li {
-      float: left;
-    }
-
     a {
       padding-top: 15px;
       padding-bottom: 15px;
@@ -250,7 +245,7 @@ html {
 }
 
 .icon-back {
-  display: inline-block;
+  display: none;
   width: 11px;
   height: 19px;
   vertical-align: text-top;
@@ -319,9 +314,9 @@ html {
 
 .navbar-quick {
   &-back-title {
-    max-width: 160px;
     overflow: hidden;
     text-overflow: ellipsis;
+    margin-right: 5%;
   }
 
   &-media-back h4 {
@@ -331,12 +326,14 @@ html {
 
   &-profile-back,
   &-group-back {
+    text-align: center;
     h4 {
       font-weight: bold;
+      font-size: 13px;
     }
 
     small {
-      font-size: 13px;
+      font-size: 9px;
       white-space: nowrap;
       overflow: hidden;
       margin-left: 0;
@@ -359,6 +356,7 @@ html {
 .navbar-offline {
   .navbar_offline & {
     float: left;
+    display: none;
     margin: 0;
   }
 
@@ -397,7 +395,7 @@ html {
 }
 
 .navbar-peer-wrap {
-  display: block;
+  display: none;
   float: right;
   width: 46px;
   height: 46px;
@@ -432,11 +430,12 @@ html {
 .tg_page_head {
   .navbar-quick-nav {
     li.navbar-quick-right {
-      float: right;
+      margin-right: 40%;
     }
 
     li.navbar-quick-left {
-      float: left;
+      text-align: center;
+
     }
 
     li.navbar-quick-title {
@@ -1434,9 +1433,8 @@ a.im_message_fwd_author {
   height: 32px;
   padding: 0;
   border: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
+//  position: absolute;
+  margin-left: 43%;
 
   &,
   &:active,
@@ -1470,7 +1468,7 @@ a.im_message_fwd_author {
 
 .im_attach {
   cursor: pointer;
-  display: block;
+  display: none;
   overflow: hidden;
   position: absolute;
   left: 0;
@@ -1491,11 +1489,10 @@ a.im_message_fwd_author {
 
 .im_record {
   display: none;
-  right: 0;
   top: -8px;
   width: 50px;
   height: 50px;
-  position: absolute;
+  margin-right: 43%;
   user-select: none;
   -moz-user-select: none;
   -webkit-user-select: none;
@@ -1745,6 +1742,7 @@ img.composer_user_photo {
   &_search {
     padding: 3px 3px 12px;
     margin: 0;
+    margin-left: 20%;
     position: relative;
   }
 
@@ -1769,6 +1767,7 @@ img.composer_user_photo {
 .media_modal_bottom {
   &_panel_wrap {
     position: fixed;
+    display: none;
     bottom: 0;
     left: 0;
     right: 0;
@@ -1785,6 +1784,7 @@ img.composer_user_photo {
 .media_modal_top {
   &_panel_wrap {
     position: fixed;
+    display: none;
     top: 0;
     left: 0;
     right: 0;
@@ -1813,6 +1813,7 @@ img.composer_user_photo {
 
       .icon-back {
         position: absolute;
+        display: none;
         margin-left: -18px;
         margin-top: 8px;
       }
@@ -1979,3 +1980,4 @@ a.media_modal_date:hover {
   right: 6px;
   top: 4px;
 }
+

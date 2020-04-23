@@ -1,8 +1,8 @@
 {
-  "name": "Telegram",
-  "description": "Telegram Web App.\nMore info & source code here: https://github.com/zhukov/webogram",
-  "version": "0.7.0",
-  "short_name": "Telegram",
+  "name": "Telegram for Galaxy Watch",
+  "description": "Telegram for Galaxy Watch Web App.",
+  "version": "1.0.0",
+  "short_name": "Telegram for Galaxy Watch",
   "manifest_version": 2,
   "app": {
     "background": {

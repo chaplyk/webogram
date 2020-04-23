@@ -36,7 +36,7 @@
               <a ng-click="$close()" class="navbar-quick-media-back">
                 <i class="icon icon-back"></i>
                 <div class="navbar-quick-back-title">
-                  <h4 my-i18n="user_modal_contact_info"></h4>
+                  
                 </div>
               </a>
             </li>
@@ -70,38 +70,13 @@
       <h4 class="mobile_modal_section_header" my-i18n="user_modal_username"></h4>
       <div class="mobile_modal_section_value" ng-bind="'@' + user.username"></div>
     </div>
-
     <div class="mobile_modal_section" ng-if="rAbout">
       <h4 class="mobile_modal_section_header" my-i18n="user_modal_about"></h4>
       <div class="mobile_modal_section_value" ng-bind-html="rAbout"></div>
     </div>
-
+<center>
     <div class="mobile_modal_action_wrap">
       <a class="mobile_modal_action" ng-click="goToHistory()" my-i18n="user_modal_send_message"></a>
-    </div>
-
-    <div ng-if="user.phone.length > 0" class="mobile_modal_action_wrap">
-      <a class="mobile_modal_action" ng-click="shareContact()" my-i18n="user_modal_share_contact"></a>
-    </div>
-
-    <div class="mobile_modal_action_wrap" ng-if="user.pFlags.bot &amp;&amp; !user.pFlags.bot_nochats">
-      <a class="mobile_modal_action" ng-click="inviteToGroup()" my-i18n="user_modal_add_to_group"></a>
-    </div>
-
-    <div class="mobile_modal_action_wrap" ng-if="bot_info.commands.settings != null">
-      <a class="mobile_modal_action" ng-click="sendCommand('settings')" my-i18n="user_modal_bot_settings"></a>
-    </div>
-
-    <div class="mobile_modal_action_wrap" ng-if="bot_info.commands.help != null">
-      <a class="mobile_modal_action" ng-click="sendCommand('help')" my-i18n="user_modal_bot_help"></a>
-    </div>
-
-
-    <div class="mobile_modal_action_wrap">
-      <a class="mobile_modal_action tg_checkbox clearfix" ng-click="settings.notifications = !settings.notifications" ng-class="settings.notifications ? 'tg_checkbox_on' : ''">
-        <span class="icon icon-checkbox-outer"><i class="icon-checkbox-inner"></i></span>
-        <span class="tg_checkbox_label" my-i18n="user_modal_notifications"></span>
-      </a>
     </div>
 
     <div class="mobile_modal_action_wrap" ng-if="!user.pFlags.self">

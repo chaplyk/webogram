@@ -4017,10 +4017,6 @@ angular.module('myApp.services', ['myApp.i18n', 'izhukov.utils'])
         return false
       }
 
-      if ('Notification' in window && Notification.permission !== 'granted' && Notification.permission !== 'denied') {
-        $($window).on('click', requestPermission)
-      }
-
       try {
         if ('onbeforeunload' in window) {
           $($window).on('beforeunload', notificationsClear)
